@@ -25,7 +25,9 @@ The objective of this project is to create a container that will run a website w
   * the `-p 5000:80` is the port binding flag.
     * I had to bind port 5000 because apache was running it's website on port 80 even though I don't have apache installed on my local system.
 
- 4. To view the project running in the container, I put `localhost:5000` into the search bar
+ 4. To view the project running in the container, I put `localhost:5000` into the search bar.
+ 
+ ![My Website](https://github.com/WSU-kduncan/3120-cicd-tylerireland/blob/main/apachesite.JPG)
      
      
   
