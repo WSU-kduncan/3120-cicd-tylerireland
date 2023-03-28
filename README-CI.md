@@ -29,5 +29,6 @@ The objective of this project is to create a container that will run a website w
  
  ![My Website](https://github.com/WSU-kduncan/3120-cicd-tylerireland/blob/main/apachesite.JPG)
      
-     
-  
+ 
+ 
+ ## Part 2 - GitHub Actions & DockerHub
