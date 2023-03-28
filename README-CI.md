@@ -33,7 +33,7 @@ The objective of this project is to create a container that will run a website w
  
  ## Part 2 - GitHub Actions & DockerHub
  
- 1. To create a repository in DockerHub, I:
+ 1. To create a repository in DockerHub, I
    * registered a free account
    * hit the 'repositories' tab at the top
    * selected 'create repository' at the top right
@@ -41,3 +41,21 @@ The objective of this project is to create a container that will run a website w
    * kept it public
    * hit 'create'
 
+2. After creating an account and repository, I 
+  * used the command `docker login` to authenticate my account through the CLI
+  * entered my username when prompted
+  * entered my token when prompted for the password.
+    * I recommend using a token in place of the password becuase it protects the account if the computer is compromised, and while using an access token, you cannot perform any admin controls, such as changing the password. This makes this connection much more secure.
+    
+3. To push a container image to Dockerhub, I used the command `docker image push`
+
+4. To create a secret, I
+  * went into the repository settings
+  * selected `secrets and variables`
+  * selected `actions`
+  * created two secrets with the `new repository secret` button
+  * named them `DOCKERHUB-USERNAME` and `DOCKERHUB_TOKEN`
+  * gave them their secret value accordingly
+    * These were the two secrets that were set for this project. We used these to log in to Dockerhub through the workflow 
+
+5. The GitHub workflow
