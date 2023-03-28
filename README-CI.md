@@ -58,4 +58,5 @@ The objective of this project is to create a container that will run a website w
   * gave them their secret value accordingly
     * These were the two secrets that were set for this project. We used these to log in to Dockerhub through the workflow 
 
-5. The GitHub workflow
+5. When a push event occurs, the GitHub workflow is triggered, which builds a Docker image and pushed it to Dockerhub. Some variables in the workflow that are custom to my project are my GitHub secrets, which provides my username and token to login to Dockerhub.
+
