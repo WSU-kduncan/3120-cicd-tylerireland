@@ -32,3 +32,12 @@ The objective of this project is to create a container that will run a website w
  
  
  ## Part 2 - GitHub Actions & DockerHub
+ 
+ 1. To create a repository in DockerHub, I:
+   * registered a free account
+   * hit the 'repositories' tab at the top
+   * selected 'create repository' at the top right
+   * gave it a name
+   * kept it public
+   * hit 'create'
+
