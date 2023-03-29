@@ -6,7 +6,7 @@
 The objective of this project is to create a container that will run a website with apache2. Containers contain libraries and files required to run a single service or software. They are similar to a virtual machine, but are much more lightweight and efficient. They can also be deployed are many machines.
   
 ### Run Project Locally
-1. WSL2 should be installed prior to installing Docker. Docker uses WSL2 so having it installed before will make the installation smoother. I already had WSL2 installed prior to this project. I installed both through their website and it was pretty simple.
+1. When installing Docker for Windows, WSL2 is recommended and should be installed prior to installing Docker. Having it installed before will make the installation smoother. I already had WSL2 installed prior to this project. I installed both through their website and it was pretty simple.
   
 2. Building an image from a Dockerfile requires 3 things:  
   *  ` FROM httpd:2.4 `  
