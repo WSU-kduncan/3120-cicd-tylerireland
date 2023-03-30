@@ -2,7 +2,7 @@ name: Docker-Login-Build-Push
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   
 jobs:
   build_and_push:
