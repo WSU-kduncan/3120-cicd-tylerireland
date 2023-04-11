@@ -44,6 +44,8 @@ Once enabled, the task definition file, `webhook.conf`, is required for the serv
 
 Configuring the webhook on GitHub is pretty simple. Under settings, there is a webhook tab, which is where you set up the webhook. For the URL I used  `http://54.158.236.40:9000/hooks/redeploy-webhook` and the trigger was `Workflow Run`
 
+[Screen Recording](https://github.com/WSU-kduncan/3120-cicd-tylerireland/blob/main/media/CDWorkflow%20-%20Made%20with%20Clipchamp.mp4)
+
 
 
 
