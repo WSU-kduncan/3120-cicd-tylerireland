@@ -3,10 +3,25 @@
 ## Part 1 - Semantic Versioning
 
 ### Overview
-We are using continuous deployment in this project to automate the tasks of pulling the image back
-to the system after an update is pushed. First, I created tags to indicate which image should be pulled.
-Once the images are tagged, I used a webhook to automatically send a message back to the 
-system indicating that the image has been updated. This will also automatically pull the image back to the system.
+We are using continuous deployment in this project to automatically pull and run images once an update is pushed.
+
+```mermaid
+flowchart TB
+  subgraph Continuous Itegration
+  
+  A(edit file in repository) -- commit, tag, and push --> G(GitHub) -- triggers --> B(GitHub Workflow);
+  end
+  subgraph Continuous Deployment
+  
+  B -- triggers --> C{{Webhook}};
+  B -- pushes new update --> D{{DockerHub}};
+  C -- runs --> E{{redeploy.sh}};
+  E -- pulls new image --> D;
+  E -- runs on port 8000 --> F{{Updated Site}}; 
+  end
+ 
+```
+This flowchart shows the steps of continuous integration and continuous deployment. First, we edit the repository, then commit, tag and push the new update. Once the update has been pushed to GitHub, the GitHub workflow will automatically push the new update to DockerHub; this is the continuous integration part. Next, the completion of the workflow will trigger the Webhook to run. The Webhook is responsible for running a script that will stop any current image and remove it. It will then pull the new image that was pushed to DockerHub from the workflow and run it automatically. 
 
 ### Generating Tags
 To generate a tag:
