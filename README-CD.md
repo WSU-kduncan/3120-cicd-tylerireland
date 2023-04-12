@@ -25,7 +25,7 @@ Here is my [DockerHub Repository](https://hub.docker.com/repository/docker/tyler
 
 ### Installing Docker
 To install docker on the ubuntu instance I used the command:  
-* ```sudo apt-get remove docker docker-engine docker.io containerd runc```  
+* ```sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin```  
   
 found on the official [dockerhub](https://docs.docker.com/engine/install/ubuntu/) website
 
@@ -43,8 +43,6 @@ Since out instance's reboot I made sure to have the `webhook` service start up o
 Once enabled, the task definition file, `webhook.conf`, is required for the service to properly startup. This defines what the webhook will do (ie. run a script) and is located in the `/etc` folder.
 
 Configuring the webhook on GitHub is pretty simple. Under settings, there is a webhook tab, which is where you set up the webhook. For the URL I used  `http://54.158.236.40:9000/hooks/redeploy-webhook` and the trigger was `Workflow Run`
-
-[Screen Recording](https://github.com/WSU-kduncan/3120-cicd-tylerireland/blob/main/media/CDWorkflow%20-%20Made%20with%20Clipchamp.mp4)
 
 
 
